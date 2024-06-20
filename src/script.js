@@ -251,10 +251,10 @@ class Point {
 document.addEventListener('DOMContentLoaded', () => {
     const game = new Game();
     const initialPoints = [
-        new Point(-50, -50, -50), new Point(50, -50, -50),
-        new Point(50, 50, -50), new Point(-50, 50, -50),
-        new Point(-50, -50, 50), new Point(50, -50, 50),
-        new Point(50, 50, 50), new Point(-50, 50, 50)
+        new Point(-250, -250, -250), new Point(250, -250, -250),
+        new Point(250, 250, -250), new Point(-250, 250, -250),
+        new Point(-250, -250, 250), new Point(250, -250, 250),
+        new Point(250, 250, 250), new Point(-250, 250, 250)
     ];
     const cube = new Cube(initialPoints);
     game.graphics.push(cube);
@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let angleX = 0;
     let angleY = 0;
-    const rotateSpeedX = 0.01;
-    const rotateSpeedY = 0.02;
+    const rotateSpeedX = 0.001;
+    const rotateSpeedY = 0.002;
 
     document.addEventListener('keydown', (event) => {
         game.pressedKey = event.key;
